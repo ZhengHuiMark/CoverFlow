@@ -13,6 +13,7 @@
 		DD7B367E1DC4A8BF00229209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7B367C1DC4A8BF00229209 /* Main.storyboard */; };
 		DD7B36801DC4A8BF00229209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7B367F1DC4A8BF00229209 /* Assets.xcassets */; };
 		DD7B36831DC4A8BF00229209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7B36811DC4A8BF00229209 /* LaunchScreen.storyboard */; };
+		DD7B368C1DC4B1FD00229209 /* ZHCoverFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7B368B1DC4B1FD00229209 /* ZHCoverFlowCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		DD7B367F1DC4A8BF00229209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD7B36821DC4A8BF00229209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD7B36841DC4A8BF00229209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7B368A1DC4B1FD00229209 /* ZHCoverFlowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCoverFlowCell.h; sourceTree = "<group>"; };
+		DD7B368B1DC4B1FD00229209 /* ZHCoverFlowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCoverFlowCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				DD7B36771DC4A8BF00229209 /* AppDelegate.m */,
 				DD7B36791DC4A8BF00229209 /* ViewController.h */,
 				DD7B367A1DC4A8BF00229209 /* ViewController.m */,
+				DD7B368A1DC4B1FD00229209 /* ZHCoverFlowCell.h */,
+				DD7B368B1DC4B1FD00229209 /* ZHCoverFlowCell.m */,
 				DD7B367C1DC4A8BF00229209 /* Main.storyboard */,
 				DD7B367F1DC4A8BF00229209 /* Assets.xcassets */,
 				DD7B36811DC4A8BF00229209 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7B367B1DC4A8BF00229209 /* ViewController.m in Sources */,
+				DD7B368C1DC4B1FD00229209 /* ZHCoverFlowCell.m in Sources */,
 				DD7B36781DC4A8BF00229209 /* AppDelegate.m in Sources */,
 				DD7B36751DC4A8BF00229209 /* main.m in Sources */,
 			);

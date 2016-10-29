@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZHCoverFlowCell.h"
 
 // 重用标识符
 static NSString *cellId = @"cellID";
@@ -41,10 +42,12 @@ static NSString *cellId = @"cellID";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // 1.创建cell
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    ZHCoverFlowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     
     // 2.设置数据
     cell.backgroundColor = [UIColor redColor];
+    cell.image = _imgsArr[indexPath.row % 3];
+
   
     // 3.返回cell
     return cell;
@@ -77,7 +80,7 @@ static NSString *cellId = @"cellID";
     
     // 注册cell
     
-    [cv registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellId];
+    [cv registerClass:[ZHCoverFlowCell class] forCellWithReuseIdentifier:cellId];
    
     [self.view addSubview:cv];
     
