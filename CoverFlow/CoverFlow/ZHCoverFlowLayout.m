@@ -59,14 +59,29 @@
         // - 4.将距离转换成缩放的比例! ABS() -> 取绝对值!
         CGFloat scale = 1 - ABS(distance) / self.collectionView.bounds.size.width;
         
+        // - 5.旋转
+        // - 5.1 旋转的角度!
+        CGFloat angle = (1 - scale) * M_PI_2;
+        
+        // 如果距离大于0,左边 -> * 1,正的角度
+        // 如果距离小于0,右边 -> * -1,负的角度!
+        angle *= ((distance > 0) ? 1 : -1);
+
         // - 单位矩阵
         CATransform3D transform = CATransform3DIdentity;
         
+        // - 5.3 增加透视效果
+        transform.m34 = - 1.0 / 500;
+
         
-        // - 缩放
+        // - 4.2 缩放
         transform = CATransform3DScale(transform, scale, scale, 1);
         
-        // 赋值!
+        // - 5.2 旋转
+        transform = CATransform3DRotate(transform, angle, 0, 1, 0);
+
+        
+        // 4.3 赋值!
         newAttr.transform3D = transform;
 
         // 2.2.x 保存到临时集合
