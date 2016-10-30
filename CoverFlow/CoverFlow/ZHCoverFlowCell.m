@@ -44,6 +44,18 @@
     // MARK: - 1.添加imageView
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.bounds];
     imgView.backgroundColor = [UIColor magentaColor];
+    // 设置图片的填充模式!
+    imgView.contentMode = UIViewContentModeScaleAspectFill;
+    imgView.clipsToBounds = YES;
+    
+    // 设置圆角
+    imgView.layer.cornerRadius = 10;
+    imgView.layer.masksToBounds = YES;
+    
+    // 设置边框颜色
+    imgView.layer.borderColor = [UIColor whiteColor].CGColor;
+    imgView.layer.borderWidth = 1;
+
     
     [self.contentView addSubview:imgView];
     
