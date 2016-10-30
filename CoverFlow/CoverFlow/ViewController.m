@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ZHCoverFlowCell.h"
-
+#import "ZHCoverFlowLayout.h"
 // 重用标识符
 static NSString *cellId = @"cellID";
 
@@ -45,7 +45,7 @@ static NSString *cellId = @"cellID";
     ZHCoverFlowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     
     // 2.设置数据
-    cell.backgroundColor = [UIColor redColor];
+//    cell.backgroundColor = [UIColor redColor];
     cell.image = _imgsArr[indexPath.row % 3];
 
   
@@ -69,7 +69,8 @@ static NSString *cellId = @"cellID";
 - (void)setupUI {
     
     // MARK: - 1.添加collectionView
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    ZHCoverFlowLayout *flowLayout = [[ZHCoverFlowLayout alloc]init];
     
     UICollectionView *cv = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 200) collectionViewLayout:flowLayout];
    
